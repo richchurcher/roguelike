@@ -5,10 +5,12 @@ namespace Roguelike
     public class Board
     {
         private List<List<string>> _board;
+        private Player _player;
 
         public Board()
         {
             InitBoard();
+            _player = new Player(0,0);
         }
 
         private void InitBoard()
