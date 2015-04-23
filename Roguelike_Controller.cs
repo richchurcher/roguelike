@@ -9,26 +9,26 @@ namespace Roguelike
 {
     class Roguelike_Controller
     {
-        public DummyModel Model  { get; set; }
-        public DummyView View { get; set; }
+        public Board _board  { get; set; }
+        //public Player player { get; set; }
+        public DummyView _view { get; set; }
 
         public Roguelike_Controller()
         {
-            Model = new DummyModel();
-            View = new DummyView();
+            _board = new Board();
+            //player = new Player(0, 0);
+            _view = new DummyView();
+            
         }
 
         public void MoveCharacter()
         {
-            ConsoleKeyInfo direction = View.MoveInput();
-            List<List<String>> updatedBoard = DummyModel.DoSomethingWithMove(direction);
-            View.UpdateBoard(updatedBoard);
+            ConsoleKeyInfo direction = _view.MoveInput();
+            List<List<String>> updatedBoard = _board.DoSomethingWithMove(direction);
+            _view.ClearBoard();
+            _view.BoardView(updatedBoard);
+            
         }
-
-
-
-
-
-
+        
     }
 }
