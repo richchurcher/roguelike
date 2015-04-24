@@ -12,27 +12,30 @@ namespace Roguelike
         public Board _MainBoard  { get; set; }
         public BoardView _view { get; set; }
         //public Player player { get; set; }
+        public Keys _Keys { get; set; }
 
         public Roguelike_Controller()
         {
             _MainBoard = new Board();
             //player = new Player(0, 0);
-            _view = new BoardView(_MainBoard.Get());
+            _view = new BoardView();
+            _view.CreateBoard(_MainBoard.Get());
+            _Keys = new Keys();
             
         }
         
         public void MoveCharacter()
         {
-            ConsoleKeyInfo direction = _view.MoveInput();
-            List<List<String>> updatedBoard = _MainBoard.DoSomethingWithMove(direction);
+            ConsoleKey direction = _Keys.ReadingKeys();
+            List<List<String>> updatedBoard = _MainBoard.MovePlayer(direction);
             _view.ClearBoard();
-            _view.BoardView(updatedBoard);
+            _view.CreateBoard(updatedBoard);
             
         }
 
         public void Game()
         {
-            while (!_MainBoard.Finished())
+            while (!_MainBoard.CheckForWin())
             {
                 MoveCharacter();
             }
