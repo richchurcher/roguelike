@@ -19,6 +19,7 @@ namespace Roguelike
             _MainBoard = new Board();
             //player = new Player(0, 0);
             _view = new BoardView();
+            _view.ClearBoard();
             _view.CreateBoard(_MainBoard.Get());
             _Keys = new Keys();
             
@@ -35,6 +36,7 @@ namespace Roguelike
 
         public void Game()
         {
+            
             while (!_MainBoard.CheckForWin())
             {
                 MoveCharacter();
