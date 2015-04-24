@@ -49,7 +49,7 @@ namespace Roguelike
             return _board[_player.Row][_player.Col] != " ";
         }
 
-        public void MovePlayer(ConsoleKey key)
+        public List<List<string>> MovePlayer(ConsoleKey key)
         {
             int row = _player.Row;
             int col = _player.Col;
@@ -69,10 +69,18 @@ namespace Roguelike
                     col++;
                     break;
             }
+
             if (row > 0 && row < _board.Count)
                 _player.Row = row;
             if (col > 0 && col < _board[0].Count)
                 _player.Col = col;
+
+            if(CheckForTrap())
+                ResetPlayer();
+            Refresh();
+            return _board;
+
+
         }
 
         public void ResetPlayer()
