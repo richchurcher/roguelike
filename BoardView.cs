@@ -19,14 +19,10 @@ namespace Roguelike
                 Console.Write("\n");
             }
         }
-    
+
         public void ClearBoard()
         {
-           Console.Clear();
+            Console.Clear();
         }
-
-       
-
-
     }
 }
