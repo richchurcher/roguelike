@@ -51,25 +51,36 @@ namespace Roguelike
 
         public void MovePlayer(ConsoleKey key)
         {
+            int row = _player.Row;
+            int col = _player.Col;
+
             switch (key)
             {
                 case ConsoleKey.UpArrow:
+                    row--;
                     break;
                 case ConsoleKey.DownArrow:
+                    row++;
                     break;
                 case ConsoleKey.LeftArrow:
+                    col--;
                     break;
                 case ConsoleKey.RightArrow:
+                    col++;
                     break;
-
-
             }
+            if (row > 0 && row < _board.Count)
+                _player.Row = row;
+            if (col > 0 && col < _board[0].Count)
+                _player.Col = col;
         }
+
         public void ResetPlayer()
         {
             _player.Row = 0;
             _player.Col = 0;
         }
+
         private void Refresh()
         {
             Wipe();
