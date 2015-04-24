@@ -10,8 +10,8 @@ namespace Roguelike
     class Roguelike_Controller
     {
         public Board _board  { get; set; }
-        //public Player player { get; set; }
         public DummyView _view { get; set; }
+        //public Player player { get; set; }
 
         public Roguelike_Controller()
         {
