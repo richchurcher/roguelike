@@ -29,11 +29,6 @@ namespace Roguelike
             };
         }
 
-        public void Update()
-        {
-            _board[_player.Row][_player.Col] = _player.ToString();
-        }
-
         public List<List<string>> Get()
         {
             return _board;

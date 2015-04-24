@@ -10,18 +10,20 @@ namespace Roguelike
     {
         public BoardView(List<List<string>> board )
         {
+
             for (int i = 0; i < board.Count; i++)
             {
-                for (int j = 0; j < board.Count; j++)
+                for (int j = 0; j < board[i].Count; j++)
                 {
-                    Console.WriteLine(board[i][j]);
+                    Console.Write(board[i][j]);
                 }
+                Console.Write("\n");
             }               
         }
 
         public void ClearBoard()
         {
-            
+           Console.Clear();
         }
     }
 }
