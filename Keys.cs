@@ -39,10 +39,9 @@ namespace Roguelike
                 {
                     Console.WriteLine("Please use the arrow keys");
                 }
-                return key;
             }
 
-          
+            return key;
         }
     }
 }
