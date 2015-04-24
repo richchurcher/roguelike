@@ -46,7 +46,7 @@ namespace Roguelike
 
         public bool CheckForTrap()
         {
-            return _board[_player.Row][_player.Col] != " ";
+            return _board[_player.Row][_player.Col] == ">";
         }
 
         public List<List<string>> MovePlayer(ConsoleKey key)
