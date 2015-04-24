@@ -70,9 +70,9 @@ namespace Roguelike
                     break;
             }
 
-            if (row > 0 && row < _board.Count)
+            if (row >= 0 && row < _board.Count)
                 _player.Row = row;
-            if (col > 0 && col < _board[0].Count)
+            if (col >= 0 && col < _board[0].Count)
                 _player.Col = col;
 
             if(CheckForTrap())

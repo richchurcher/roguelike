@@ -37,7 +37,9 @@ namespace Roguelike
                 }
                 else
                 {
-                    Console.WriteLine("Please use the arrow keys");
+                    Console.WriteLine(" Please use the arrow keys");
+                    keepReading = false;
+                    ReadingKeys();
                 }
             }
 
