@@ -8,9 +8,8 @@ namespace Roguelike
 {
     public class BoardView
     {
-        public BoardView(List<List<string>> board )
+        public void CreateBoard(List<List<string>> board)
         {
-
             for (int i = 0; i < board.Count; i++)
             {
                 for (int j = 0; j < board[i].Count; j++)
@@ -18,12 +17,16 @@ namespace Roguelike
                     Console.Write(board[i][j]);
                 }
                 Console.Write("\n");
-            }               
+            }
         }
-
+    
         public void ClearBoard()
         {
            Console.Clear();
         }
+
+       
+
+
     }
 }
