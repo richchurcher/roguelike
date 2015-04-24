@@ -39,7 +39,12 @@ namespace Roguelike
             {
                 MoveCharacter();
             }
-            Console.WriteLine("You won the game!");
+            //YOU WON!!!!!
+            var start = DateTime.UtcNow;
+            while ((DateTime.UtcNow - start) < TimeSpan.FromSeconds(5))
+            {
+                Console.WriteLine("YOU WON THE GAME YEEEEAAAAAAAAAA!");
+            }
             Console.WriteLine("Press any key to exit");
             Console.ReadLine();
         }
