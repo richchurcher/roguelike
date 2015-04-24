@@ -99,6 +99,12 @@ namespace Roguelike
             }
         }
 
+
+        public bool CheckForWin()
+        {
+            return _player.Row == 8 && _player.Col == 8;
+
+        }
         public List<List<string>> Get()
         {
             return _board;
