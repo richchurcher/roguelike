@@ -7,7 +7,7 @@ namespace Roguelike
         static void Main(string[] args)
         {
            Roguelike_Controller controller = new Roguelike_Controller();
-            controller.Game();
+           controller.Game();
         }
     }
 }
