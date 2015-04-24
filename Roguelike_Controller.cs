@@ -41,6 +41,5 @@ namespace Roguelike
             Console.ReadLine();
         }
 
-
     }
 }
