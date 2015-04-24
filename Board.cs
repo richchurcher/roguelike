@@ -49,6 +49,22 @@ namespace Roguelike
             return _board[_player.Row][_player.Col] != " ";
         }
 
+        public void MovePlayer(ConsoleKey key)
+        {
+            switch (key)
+            {
+                case ConsoleKey.UpArrow:
+                    break;
+                case ConsoleKey.DownArrow:
+                    break;
+                case ConsoleKey.LeftArrow:
+                    break;
+                case ConsoleKey.RightArrow:
+                    break;
+
+
+            }
+        }
         public void ResetPlayer()
         {
             _player.Row = 0;
