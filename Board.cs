@@ -49,6 +49,11 @@ namespace Roguelike
             return _board[_player.Row][_player.Col] != " ";
         }
 
+        public void ResetPlayer()
+        {
+            _player.Row = 0;
+            _player.Col = 0;
+        }
         private void Refresh()
         {
             Wipe();
