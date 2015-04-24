@@ -17,19 +17,19 @@ namespace Roguelike
             {
                 if (key == ConsoleKey.RightArrow)
                 {
-                    // Tell the controller to do something;
+                    return key;
                 }
                 if (key == ConsoleKey.LeftArrow)
                 {
-                    // Tell the controller to do something else
+                    return key;
                 }
                 if (key == ConsoleKey.UpArrow)
                 {
-                    // tell controller to do something
+                    return key;
                 }
                 if (key == ConsoleKey.DownArrow)
                 {
-                    // tell controller to do something 
+                    return key;
                 }
                 if (key == ConsoleKey.Q)
                 {
@@ -39,8 +39,10 @@ namespace Roguelike
                 {
                     Console.WriteLine("Please use the arrow keys");
                 }
+                return key;
             }
-            return key;
+
+          
         }
     }
 }
