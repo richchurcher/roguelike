@@ -44,6 +44,11 @@ namespace Roguelike
             };
         }
 
+        public bool CheckForTrap()
+        {
+            return _board[_player.Row][_player.Col] != " ";
+        }
+
         private void Refresh()
         {
             Wipe();
