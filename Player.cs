@@ -11,12 +11,6 @@
             this.Col = col;
         }
 
-        public void Move(int row, int col)
-        {
-            this.Row = row;
-            this.Col = col;
-        }
-
         public string ToString()
         {
             return "?";
