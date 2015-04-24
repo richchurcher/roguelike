@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Roguelike
 {
@@ -9,11 +10,11 @@ namespace Roguelike
 
         public Board()
         {
-            InitBoard();
             _player = new Player(0,0);
+            Refresh();
         }
 
-        private void InitBoard()
+        private void Wipe()
         {
             _board = new List<List<string>>(9)
             {
@@ -29,8 +30,9 @@ namespace Roguelike
             };
         }
 
-        public void Update()
+        private void Refresh()
         {
+            Wipe();
             _board[_player.Row][_player.Col] = _player.ToString();
         }
 
@@ -39,6 +41,19 @@ namespace Roguelike
             return _board;
         }
 
+        public string ToString()
+        {
+            string s = "";
+            foreach (List<string> row in _board)
+            {
+                foreach (string square in row)
+                {
+                    s += square;
+                }
+                s += "\n";
+            }
+            return s;
+        }
 
     }
 }
