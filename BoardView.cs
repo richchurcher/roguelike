@@ -10,7 +10,7 @@ namespace Roguelike
     {
         public void CreateBoard(List<List<string>> board)
         {
-            Console.WriteLine("@@@@@@@@@@@");
+            Console.WriteLine("###########");
             for (int i = 0; i < board.Count; i++)
             {
                 if (i == 0)
@@ -19,7 +19,7 @@ namespace Roguelike
                 }
                 else
                 {
-                    Console.Write("@");
+                    Console.Write("#");
                 }
                 for (int j = 0; j < board[i].Count; j++)
                 {
@@ -31,10 +31,10 @@ namespace Roguelike
                 }
                 else
                 {
-                    Console.Write("@\n");
+                    Console.Write("#\n");
                 }
             }
-            Console.WriteLine("@@@@@@@@@@@");
+            Console.WriteLine("###########");
         }
 
         public void ClearBoard()
